@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="datatables/css/dataTables.bootstrap.min.css">
+	
+</head>
+<body>
+	
+	<div class="container-fluid" style="margin-top: 40px;">
+
+		<div id="tableManager" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-content">
+						
+					<div class="modal-header">
+						<h2 class="modal-title"> What did you eat today? </h2>
+					</div>
+
+					<div class="modal-body">
+	                    <div id="editContainer">
+	                    	<input class="form-control" id="breaker" placeholder="Breakfast"><br>
+		                    <input class="form-control" id="lunch" placeholder="Lunch"><br>
+							<input class="form-control" id="dinner" placeholder="Dinner"><br>
+							<textarea class="form-control" id="anythingElse" placeholder="Anything else?"></textarea>
+							<input type="hidden" id="editRowID" value="0">
+	                    </div>
+	                    <div id="showContent" style="display: none;">
+	                    	
+	                    </div>
+					</div>
+
+					<div class="modal-footer">
+						<input type="button" id="manageBtn" onclick="managerData('addNew')" value="Save" class="btn btn-success">
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<h2>CRUD PHP</h2>
+				<input style="float: right;" type="button" class="btn btn-success" id="addNew" value="Add new">
+				<br><br>
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Breakfast</th>
+						<th>Lunch</th>
+						<th>Dinner</th>
+						<th>Anything else?</th>
+						<th>Options</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="datatables/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="datatables/js/dataTables.bootstrap.min.js"></script>
+  
+
+</body>
+</html>
